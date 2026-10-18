@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      { "hooks": [ { "type": "command", "command": "powershell -NoProfile -ExecutionPolicy Bypass -File \"%USERPROFILE%\\.claude\\hooks\\hebrew-language-rule.ps1\"" } ] }
+    ]
+  },
+  "autoMemoryDirectory": "{{HOME_FORWARD_SLASHES}}/ObsidianVault/05_Resources/Claude Code/memory",
+  "enabledPlugins": {
+    "document-skills@anthropic-agent-skills": true,
+    "example-skills@anthropic-agent-skills": true,
+    "minimax-skills@minimax-skills": true
+  },
+  "extraKnownMarketplaces": {
+    "anthropic-agent-skills": { "source": { "source": "github", "repo": "anthropics/skills" } },
+    "minimax-skills": { "source": { "source": "git", "url": "https://github.com/MiniMax-AI/skills.git" } }
+  }
+}
